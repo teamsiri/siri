@@ -43,11 +43,11 @@ async def song(client, message):
         open(thumb_name, "wb").write(thumb.content)
 
     except Exception as e:
-        await m.edit("لم يتم العثور على الأغنية، يرجى المحاولة مرة أخرى!")
+        await m.edit("لم يتم العثور على الأغنية، يرجى المحاولة مرة أخرى .")
         logging.error(f"Failed to fetch YouTube video: {str(e)}")
         return
     
-    await m.edit("جارٍ التنزيل... الرجاء الانتظار!")
+    await m.edit("جارٍ التنزيل... الرجاء الانتظار ...")
     
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -60,7 +60,7 @@ async def song(client, message):
         await message.reply_audio(
             audio_file,
             caption=rep,
-            performer="@xl444.",
+            performer="@rzzrzz .",
             thumb=thumb_name,
             title=title,
         )
