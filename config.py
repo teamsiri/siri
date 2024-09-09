@@ -43,8 +43,7 @@ SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/SourceSiri")
 SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/SourceSiri")
 
 # اضبط هذا على "صحيح" إذا كنت تريد أن يترك المساعد المحادثات تلقائيًا بعد فترة زمنية محددة
-AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "")
-AUTO_LEAVE_ASSISTANT_TIME = int(getenv("ASSISTANT_LEAVE_TIME", "9999"))
+AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT","")
 
 CHANNEL_SUDO = getenv(
     "CHANNEL_SUDO", "SourceSiri"
