@@ -51,7 +51,7 @@ class Userbot(Client):
         if config.STRING1:
             await self.one.start()
             try:
-                await self.one.join_chat("DevilsHeavenMF")
+                await self.one.join_chat("SourceSiri")
                 await self.one.join_chat("SourceSiri")
             except:
                 pass
@@ -72,7 +72,7 @@ class Userbot(Client):
         if config.STRING2:
             await self.two.start()
             try:
-                await self.two.join_chat("DevilsHeavenMF")
+                await self.two.join_chat("SourceSiri")
                 await self.two.join_chat("SourceSiri")
             except:
                 pass
@@ -93,7 +93,7 @@ class Userbot(Client):
         if config.STRING3:
             await self.three.start()
             try:
-                await self.three.join_chat("DevilsHeavenMF")
+                await self.three.join_chat("SourceSiri")
                 await self.three.join_chat("SourceSiri")
             except:
                 pass
@@ -114,7 +114,7 @@ class Userbot(Client):
         if config.STRING4:
             await self.four.start()
             try:
-                await self.four.join_chat("DevilsHeavenMF")
+                await self.four.join_chat("SourceSiri")
                 await self.four.join_chat("SourceSiri")
             except:
                 pass
@@ -135,7 +135,7 @@ class Userbot(Client):
         if config.STRING5:
             await self.five.start()
             try:
-                await self.five.join_chat("DevilsHeavenMF")
+                await self.five.join_chat("SourceSiri")
                 await self.five.join_chat("SourceSiri")
             except:
                 pass
