@@ -48,4 +48,5 @@ youtube_search
 uuid==1.30
 SafoneAPI
 wget
+unidecode
 pybind11>=2.12
