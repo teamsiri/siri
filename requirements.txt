@@ -13,7 +13,7 @@ pySmartDL
 psutil
 py-tgcalls==0.9.7
 pykeyboard
-pyrogram==2.0.106
+pyrogram
 python-dotenv
 pyyaml
 requests
@@ -21,7 +21,7 @@ speedtest-cli
 spotipy
 tgcrypto
 unidecode
-yt-dlp==2024.7.9
+yt-dlp
 youtube-search
 youtube-search-python
 wget
