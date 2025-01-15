@@ -9,9 +9,9 @@ from AnonXMusic.utils import bot_sys_stats
 from AnonXMusic.utils.decorators.language import language
 from AnonXMusic.utils.inline import supp_markup
 from config import BANNED_USERS, PING_IMG_URL
+from strings.filters import command
 
-
-@app.on_message(filters.command(["ping", "alive"]) & ~BANNED_USERS)
+@app.on_message(command(["ping", "سرعة البوت"]) & ~BANNED_USERS)
 @language
 async def ping_com(client, message: Message, _):
     start = datetime.now()
