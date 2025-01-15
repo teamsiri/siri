@@ -4,25 +4,16 @@ from AnonXMusic import app
 from AnonXMusic.misc import SUDOERS
 from AnonXMusic.utils.database import add_off, add_on
 from AnonXMusic.utils.decorators.language import language
-
 from strings.filters import command
 
-@app.on_message(command(["تفعيل السجلات"]) & SUDOERS)
+@app.on_message(command(["تفعيل الاشعارات"]) & SUDOERS)
 @language
-async def enable_notifications(client, message, _):
-    usage = _["log_1"]
-    if len(message.command) != 2:
-        return await message.reply_text(usage)
-    
+async def enable_notifications(client, message):
     await add_on(2)
-    await message.reply_text(_["log_2"])
+    await message.reply_text("تم تفعيل الإشعارات بنجاح!")
 
-@app.on_message(command(["تعطيل السجلات"]) & SUDOERS)
+@app.on_message(command(["تعطيل الاشعارات"]) & SUDOERS)
 @language
-async def disable_notifications(client, message, _):
-    usage = _["log_1"]
-    if len(message.command) != 2:
-        return await message.reply_text(usage)
-    
+async def disable_notifications(client, message):
     await add_off(2)
-    await message.reply_text(_["log_3"])
+    await message.reply_text("تم تعطيل الإشعارات بنجاح!")
