@@ -22,12 +22,14 @@ from AnonXMusic.utils.pastebin import AnonyBin
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-
+def cdx(commands: Union[str, List[str]]):
+    return pyrofl.command(commands, ["","/", "!", "."])
+    
 async def is_heroku():
     return "heroku" in socket.getfqdn()
 
 
-@app.on_message(filters.command(["getlog", "logs", "getlogs"]) & SUDOERS)
+@app.on_message(cdx(["getlog", "logs", "السجلات"]) & SUDOERS)
 @language
 async def log_(client, message, _):
     try:
@@ -36,7 +38,7 @@ async def log_(client, message, _):
         await message.reply_text(_["server_1"])
 
 
-@app.on_message(filters.command(["update", "gitpull"]) & SUDOERS)
+@app.on_message(cdx(["update", "تحديث الملفات"]) & SUDOERS)
 @language
 async def update_(client, message, _):
     if await is_heroku():
@@ -110,7 +112,7 @@ async def update_(client, message, _):
         exit()
 
 
-@app.on_message(filters.command(["restart"]) & SUDOERS)
+@app.on_message(cdx(["restart" ,"اعادة تشغيل"]) & SUDOERS)
 async def restart_(_, message):
     response = await message.reply_text("ʀᴇsᴛᴀʀᴛɪɴɢ...")
     ac_chats = await get_active_chats()
