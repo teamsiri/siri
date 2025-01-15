@@ -19,17 +19,15 @@ from AnonXMusic.utils.database import (
 )
 from AnonXMusic.utils.decorators.language import language
 from AnonXMusic.utils.pastebin import AnonyBin
-
+from strings.filters import command
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-def cdx(commands: Union[str, List[str]]):
-    return pyrofl.command(commands, ["","/", "!", "."])
-    
+
 async def is_heroku():
     return "heroku" in socket.getfqdn()
 
 
-@app.on_message(cdx(["getlog", "logs", "السجلات"]) & SUDOERS)
+@app.on_message(command(["getlog", "logs", "السجلات"]) & SUDOERS)
 @language
 async def log_(client, message, _):
     try:
@@ -38,7 +36,7 @@ async def log_(client, message, _):
         await message.reply_text(_["server_1"])
 
 
-@app.on_message(cdx(["update", "تحديث الملفات"]) & SUDOERS)
+@app.on_message(command(["update", "تحديث الملفات"]) & SUDOERS)
 @language
 async def update_(client, message, _):
     if await is_heroku():
@@ -112,7 +110,7 @@ async def update_(client, message, _):
         exit()
 
 
-@app.on_message(cdx(["restart" ,"اعادة تشغيل"]) & SUDOERS)
+@app.on_message(command(["restart" , "اعادة تشغيل"]) & SUDOERS)
 async def restart_(_, message):
     response = await message.reply_text("ʀᴇsᴛᴀʀᴛɪɴɢ...")
     ac_chats = await get_active_chats()
