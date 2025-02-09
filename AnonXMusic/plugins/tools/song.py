@@ -5,7 +5,7 @@ import logging
 from pySmartDL import SmartDL
 from pyrogram import Client, filters
 from youtube_search import YoutubeSearch
-from YukkiMusic import app
+from AnonXMusic import app
 from strings.filters import command
 from mutagen.mp4 import MP4, MP4Cover
 
